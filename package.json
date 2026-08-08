@@ -1,0 +1,78 @@
+{
+  "name": "sanity-plugin-csv-import",
+  "sanityPlugin": {
+    "verifyPackage": {
+      "oxlint": false,
+      "oxfmt": false
+    }
+  },
+  "version": "0.1.0",
+  "description": "Import CSV files into Sanity with field mapping, transforms, and automatic schema generation",
+  "keywords": [
+    "sanity",
+    "sanity-plugin",
+    "csv",
+    "import"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Chris9soul",
+    "url": "https://github.com/Chris9soul"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chris9soul/sanity-plugin-csv-import.git"
+  },
+  "homepage": "https://github.com/Chris9soul/sanity-plugin-csv-import",
+  "bugs": {
+    "url": "https://github.com/Chris9soul/sanity-plugin-csv-import/issues"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "plugin-kit verify-package --silent && pkg-utils build --strict --check --clean",
+    "watch": "pkg-utils watch --strict",
+    "link-watch": "plugin-kit link-watch",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@sanity/icons": "^3.8.0",
+    "@sanity/ui": "^3.4.5"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19",
+    "sanity": "^5 || ^6.0.0-0"
+  },
+  "devDependencies": {
+    "@sanity/plugin-kit": "^10",
+    "@sanity/pkg-utils": "^12",
+    "@types/react": "^18",
+    "react": "^18",
+    "react-dom": "^18",
+    "sanity": "^6",
+    "styled-components": "^6",
+    "typescript": "^5"
+  },
+  "browserslist": "extends @sanity/browserslist-config",
+  "engines": {
+    "node": ">=20.19 <22 || >=22.12"
+  },
+  "packageManager": "pnpm@10.10.0",
+  "publishConfig": {
+    "exports": {
+      ".": "./dist/index.js",
+      "./package.json": "./package.json"
+    }
+  }
+}
