@@ -3,7 +3,8 @@
   "sanityPlugin": {
     "verifyPackage": {
       "oxlint": false,
-      "oxfmt": false
+      "oxfmt": false,
+      "tsconfig": false
     }
   },
   "version": "0.1.0",
